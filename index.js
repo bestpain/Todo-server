@@ -4,6 +4,8 @@ const cors=require('cors');
 const app=express();
 const bodyParser=require('body-parser')
 const port=process.env.PORT || 8000;
+app.use(bodyParser.json());
+app.use(cors());
 
 
 const connection=mysql.createConnection(
@@ -18,8 +20,6 @@ connection.connect(err=>{
 });
 
 
-app.use(bodyParser.json());
-app.use(cors());
 
 //todos query handler
 //add todo
@@ -102,16 +102,16 @@ app.post('/bucket/add',(req,res)=>{
 	})
 });
 
-// app.get('/',(req,res)=>{
-// 	const SELECT_BUCKETS="select * from buckets";
-// 	connection.query(SELECT_BUCKETS,(err,results)=>{
-// 		if(err){
-// 			return res.send(err)
-// 		}else{
-// 			return res.json(results)
-// 		}
-// 	})
-// });
+app.get('/',(req,res)=>{
+	const SELECT_BUCKETS="select * from buckets";
+	connection.query(SELECT_BUCKETS,(err,results)=>{
+		if(err){
+			return res.send(err)
+		}else{
+			return res.json(results)
+		}
+	})
+});
 
 app.get('/bucket/:id',(req,res)=>{
 	const {id}=req.params;
