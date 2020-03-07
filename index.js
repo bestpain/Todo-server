@@ -3,6 +3,8 @@ const mysql=require('mysql');
 const cors=require('cors');
 const app=express();
 const bodyParser=require('body-parser')
+const port=process.env.PORT || 8000;
+
 
 const connection=mysql.createConnection({
 		host:'localhost',
