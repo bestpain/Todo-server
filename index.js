@@ -7,7 +7,7 @@ const port=process.env.PORT || 8000;
 
 
 const connection=mysql.createConnection(
-	mysql://b060476830577f:8462c951@us-cdbr-iron-east-04.cleardb.net/heroku_edb32773ac4caee?reconnect=true
+	'mysql://b060476830577f:8462c951@us-cdbr-iron-east-04.cleardb.net/heroku_edb32773ac4caee?reconnect=true'
 	);
 //console.log(connection)
 
