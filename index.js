@@ -102,16 +102,16 @@ app.post('/bucket/add',(req,res)=>{
 	})
 });
 
-app.get('/',(req,res)=>{
-	const SELECT_BUCKETS="select * from buckets";
-	connection.query(SELECT_BUCKETS,(err,results)=>{
-		if(err){
-			return res.send(err)
-		}else{
-			return res.json(results)
-		}
-	})
-});
+// app.get('/',(req,res)=>{
+// 	const SELECT_BUCKETS="select * from buckets";
+// 	connection.query(SELECT_BUCKETS,(err,results)=>{
+// 		if(err){
+// 			return res.send(err)
+// 		}else{
+// 			return res.json(results)
+// 		}
+// 	})
+// });
 
 app.get('/bucket/:id',(req,res)=>{
 	const {id}=req.params;
