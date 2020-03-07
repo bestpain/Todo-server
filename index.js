@@ -7,10 +7,11 @@ const port=process.env.PORT || 8000;
 
 
 const connection=mysql.createConnection({
-		host:'localhost',
-		user:'root',
+	//mysql://b060476830577f:8462c951@us-cdbr-iron-east-04.cleardb.net/heroku_edb32773ac4caee?reconnect=true
+		host:'us-cdbr-iron-east-04.cleardb.net/heroku_edb32773ac4caee?reconnect=true',
+		user:'b060476830577f',
 		database:'todo',
-		password:'blahblah',
+		password:'8462c951',
 	});
 
 
