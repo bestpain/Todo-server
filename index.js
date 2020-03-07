@@ -13,7 +13,7 @@ const connection=mysql.createConnection({
 		database:'todo',
 		password:'8462c951',
 	});
-
+console.log(connection)
 
 connection.connect(err=>{
 	if(err) {
