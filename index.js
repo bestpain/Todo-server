@@ -102,7 +102,7 @@ app.post('/bucket/add',(req,res)=>{
 	})
 });
 
-app.get('/',(req,res)=>{
+app.get('/buckets',(req,res)=>{
 	const SELECT_BUCKETS="select * from buckets";
 	connection.query(SELECT_BUCKETS,(err,results)=>{
 		if(err){
