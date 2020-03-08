@@ -9,7 +9,7 @@ app.use(cors());
 
 
 const connection=mysql.createConnection(
-	'mysql://b060476830577f:8462c951@us-cdbr-iron-east-04.cleardb.net/heroku_edb32773ac4caee?reconnect=true'
+	'mysql://efkzlgyen51af7qf:dqy377oflplxypp6@tviw6wn55xwxejwj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ms09fazp4ehbywq3'
 	);
 //console.log(connection)
 
