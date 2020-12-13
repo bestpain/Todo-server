@@ -2,5 +2,5 @@
 
 A todo app where user can put tasks category wise.
 
-Database - MYSQL
+Database - MYSQL </br>
 Server - Express
